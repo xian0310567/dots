@@ -18,16 +18,11 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import useDays from './src/components/hooks/useDays';
-
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
 
 function Section({children, title}: SectionProps): JSX.Element {
-  const {getAllDatesInThisMonth} = useDays();
-  getAllDatesInThisMonth();
-
   const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
