@@ -11,7 +11,6 @@ import useDarkMode from '@/hooks/useDarkMode';
 
 function App(): JSX.Element {
   const isDarkMode = useDarkMode();
-  console.log(isDarkMode);
 
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
