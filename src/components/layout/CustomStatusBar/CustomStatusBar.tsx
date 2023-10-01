@@ -1,15 +1,17 @@
 import React from 'react';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
-import {StatusBar, useColorScheme} from 'react-native';
+import {StatusBar} from 'react-native';
+
+import useDarkMode from '@/hooks/useDarkMode';
 
 const CustomStatusBar = () => {
-  const isDarkMode = useColorScheme() === 'dark';
+  const {isDarkMode} = useDarkMode();
 
   return (
     <StatusBar
-      barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-      backgroundColor={isDarkMode ? Colors.darker : Colors.lighter}
+      barStyle={isDarkMode() ? 'light-content' : 'dark-content'}
+      backgroundColor={isDarkMode() ? Colors.darker : Colors.lighter}
     />
   );
 };
