@@ -1,10 +1,12 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Appearance} from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
+const isDarkMode = Appearance.getColorScheme() === 'dark';
+
 const styled = StyleSheet.create({
   container: {
-    backgroundColor: Colors.darker,
+    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
     flex: 1,
   },
 });
