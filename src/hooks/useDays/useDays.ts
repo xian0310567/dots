@@ -31,7 +31,7 @@ const useDays = () => {
       currentDate = currentDate.add(1, 'day');
     }
 
-    console.log(allDatesInMonth);
+    return allDatesInMonth;
   };
 
   return {getAllDatesInThisMonth};
