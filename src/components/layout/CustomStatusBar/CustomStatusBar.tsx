@@ -6,12 +6,12 @@ import {StatusBar} from 'react-native';
 import useDarkMode from '@/hooks/useDarkMode';
 
 const CustomStatusBar = () => {
-  const {isDarkMode} = useDarkMode();
+  const isDarkMode = useDarkMode();
 
   return (
     <StatusBar
-      barStyle={isDarkMode() ? 'light-content' : 'dark-content'}
-      backgroundColor={isDarkMode() ? Colors.darker : Colors.lighter}
+      barStyle={isDarkMode ? 'light-content' : 'dark-content'}
+      backgroundColor={isDarkMode ? Colors.darker : Colors.lighter}
     />
   );
 };

@@ -1,11 +1,9 @@
 import React from 'react';
 
-import {View} from 'react-native';
-
-import styled from './lib/styled';
+import Container from '@/components/atom/Container';
 
 const Home = () => {
-  return <View style={styled.container}></View>;
+  return <Container></Container>;
 };
 
 export default Home;

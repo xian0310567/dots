@@ -10,13 +10,11 @@ import Footer from '@/components/layout/Footer';
 import useDarkMode from '@/hooks/useDarkMode';
 
 function App(): JSX.Element {
-  console.log('Appearance', Appearance.getColorScheme());
-  console.log('normal', useColorScheme());
-
-  const {isDarkMode} = useDarkMode();
+  const isDarkMode = useDarkMode();
+  console.log(isDarkMode);
 
   const backgroundStyle = {
-    backgroundColor: isDarkMode() ? Colors.darker : Colors.lighter,
+    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
     flex: 1,
   };
 
