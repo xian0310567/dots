@@ -2,13 +2,11 @@ import {StyleSheet} from 'react-native';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
-const style = StyleSheet.create({
-  footer: {
+const styled = StyleSheet.create({
+  container: {
     backgroundColor: Colors.darker,
-    borderTopColor: '#aaa',
-    borderTopWidth: 0.5,
-    height: 40,
+    flex: 1,
   },
 });
 
-export default style;
+export default styled;
