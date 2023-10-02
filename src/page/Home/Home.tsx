@@ -6,11 +6,11 @@ import MonthlyPicker from '@/components/feature/Home/MonthlyPicker';
 import useDays from '@/hooks/useDays';
 
 const Home = () => {
-  const {getAllDatesInThisMonth} = useDays();
+  const {useGetAllDatesInThisMonth} = useDays();
 
   return (
     <Container>
-      <MonthlyPicker date={getAllDatesInThisMonth()} />
+      <MonthlyPicker date={useGetAllDatesInThisMonth()} />
     </Container>
   );
 };

@@ -1,4 +1,4 @@
-export interface useDaysCallback {
-  date: string;
-  daysOfTheWeek: string;
-}
+import {DaysStateCallback} from './useDaysState';
+import {DaysServiceCallback} from './useDaysService';
+
+export type DaysCallback = DaysStateCallback & DaysServiceCallback;
