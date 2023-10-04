@@ -11,7 +11,11 @@ import styled from './lib/styled';
 const Container = (props: ContainerProps) => {
   const isDarkMode = useDarkMode();
 
-  return <View style={styled(isDarkMode).container}>{props.children}</View>;
+  return (
+    <View style={styled({...props, isDarkMode}).container}>
+      {props.children}
+    </View>
+  );
 };
 
 export default Container;

@@ -1,7 +1,12 @@
-import {View} from 'react-native';
+import Container from '@/components/atom/Container';
+import NameForm from '@/components/feature/AddEventModal/NameForm';
 
 const AddEvent = () => {
-  return <View></View>;
+  return (
+    <Container padding={30}>
+      <NameForm />
+    </Container>
+  );
 };
 
 export default AddEvent;

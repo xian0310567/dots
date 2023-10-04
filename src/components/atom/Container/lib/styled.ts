@@ -1,11 +1,13 @@
 import {StyleSheet} from 'react-native';
+import {ContainerProps} from './Container';
 
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
-const styled = (isDarkMode: boolean) => {
+const styled = (props: ContainerProps & {isDarkMode: boolean}) => {
   return StyleSheet.create({
     container: {
-      backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+      padding: props.padding,
+      backgroundColor: props.isDarkMode ? Colors.darker : Colors.lighter,
       flex: 1,
     },
   });
