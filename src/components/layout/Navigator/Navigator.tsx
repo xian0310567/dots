@@ -2,13 +2,14 @@ import React from 'react';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {NavigatorCallback} from './lib/Navigator';
 
 import Home from '@/page/Home';
 import AddEvent from '@/modal/AddEvent';
 
-const Navigator = () => {
-  const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<NavigatorCallback>();
 
+const Navigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Home">
@@ -18,7 +19,7 @@ const Navigator = () => {
           options={{headerShown: false}}
         />
         <Stack.Screen
-          name="addEvent"
+          name="AddEvent"
           component={AddEvent}
           options={{presentation: 'modal', headerShown: false}}
         />
