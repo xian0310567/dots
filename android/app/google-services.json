@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "591815764819",
+    "firebase_url": "https://dots-2ab8d-default-rtdb.firebaseio.com",
+    "project_id": "dots-2ab8d",
+    "storage_bucket": "dots-2ab8d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:591815764819:android:e5885b96bdabe1d7a04fa6",
+        "android_client_info": {
+          "package_name": "com.hyper.dots"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_zKV4ui5IZqzsz1-3QsfIjXxHo2j5msg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
