@@ -5,9 +5,9 @@ const styled = StyleSheet.create({
     backgroundColor: '#333',
     borderRadius: 7,
     marginRight: 5,
-    paddingTop: 5,
-    width: 40,
-    height: 50,
+    paddingTop: 10,
+    width: 50,
+    height: 60,
   },
   date: {
     fontSize: 10,

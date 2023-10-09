@@ -4,7 +4,7 @@ const styled = StyleSheet.create({
   container: {
     backgroundColor: '#333',
     borderRadius: 10,
-    height: 50,
+    height: 60,
     paddingHorizontal: 20,
     justifyContent: 'center',
     // shadowColor: '#222',

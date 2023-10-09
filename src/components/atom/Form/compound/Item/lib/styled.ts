@@ -4,8 +4,8 @@ const styled = StyleSheet.create({
   container: {
     padding: 4,
     paddingHorizontal: 8,
-    maxHeight: 33,
-    height: 33,
+    maxHeight: 50,
+    height: 50,
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',

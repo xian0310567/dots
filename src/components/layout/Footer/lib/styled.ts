@@ -7,7 +7,7 @@ const style = StyleSheet.create({
     backgroundColor: Colors.darker,
     borderTopColor: '#aaa',
     borderTopWidth: 0.5,
-    height: 40,
+    height: 50,
   },
 });
 
