@@ -2,7 +2,7 @@ import React from 'react';
 
 import {View} from 'react-native';
 
-import useDarkMode from '@/hooks/useDarkMode';
+import useDarkMode from '@/hooks/feature/days/useDarkMode';
 
 import {ContainerProps} from './lib/Container';
 

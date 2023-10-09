@@ -4,7 +4,7 @@ import Container from '@/components/atom/Container';
 import MonthlyPicker from '@/components/feature/Home/MonthlyPicker';
 import TodoView from '@/components/feature/Home/TodoView';
 
-import useDays from '@/hooks/useDays';
+import useDays from '@/hooks/feature/days/useDays';
 
 const Home = () => {
   const {useGetAllDatesInThisMonth} = useDays();
