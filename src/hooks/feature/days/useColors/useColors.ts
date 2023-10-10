@@ -1,4 +1,6 @@
-const useColors = () => {
+import {ColorsCallback} from './lib/useColors';
+
+const useColors = (): ColorsCallback => {
   const colorList = [
     {
       name: 'peach',

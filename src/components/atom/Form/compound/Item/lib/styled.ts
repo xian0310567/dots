@@ -4,6 +4,7 @@ const styled = StyleSheet.create({
   container: {
     padding: 4,
     paddingHorizontal: 8,
+    paddingRight: 12,
     maxHeight: 50,
     height: 50,
     display: 'flex',
