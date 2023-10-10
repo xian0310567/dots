@@ -13,7 +13,7 @@ const styled = StyleSheet.create({
   },
   label: {
     paddingHorizontal: 5,
-    fontSize: 12,
+    fontSize: 14,
     color: '#aaa',
   },
 });

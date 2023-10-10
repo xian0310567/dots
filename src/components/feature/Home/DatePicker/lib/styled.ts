@@ -10,7 +10,7 @@ const styled = StyleSheet.create({
     height: 60,
   },
   date: {
-    fontSize: 10,
+    fontSize: 12,
     color: '#aaa',
     textAlign: 'center',
     marginBottom: 5,

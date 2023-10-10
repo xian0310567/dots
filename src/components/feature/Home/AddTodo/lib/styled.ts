@@ -12,7 +12,7 @@ const styled = StyleSheet.create({
     // shadowOffset: {width: 0, height: 0},
   },
   text: {
-    fontSize: 12,
+    fontSize: 14,
     color: '#ccc',
   },
 });
