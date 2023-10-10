@@ -1,5 +1,6 @@
 import Form from '@/components/atom/Form';
 import TextInput from '@/components/atom/TextInput';
+import Divider from '@/components/atom/Divider';
 
 const NameForm = () => {
   return (
@@ -7,6 +8,7 @@ const NameForm = () => {
       <Form.Item>
         <TextInput placeholder="제목" />
       </Form.Item>
+      <Divider />
       <Form.Item label="컬러"></Form.Item>
     </Form>
   );
