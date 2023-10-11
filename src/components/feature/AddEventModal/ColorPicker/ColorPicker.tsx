@@ -16,7 +16,7 @@ const ColorPicker = (props: ColorPickerProps) => {
       renderItem={color => (
         <ColorChip
           color={color.item}
-          onPress={() => props.setSelectedColor(color.item.color)}
+          onPress={() => props.onPressChip(color.item.color)}
         />
       )}
       keyExtractor={color => color.color}

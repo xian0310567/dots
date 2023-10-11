@@ -8,8 +8,6 @@ import {NavigatorCallback} from './lib/Navigator';
 import Home from '@/page/Home';
 import AddEvent from '@/modal/AddEvent';
 
-import HeaderSaveButton from '@/components/feature/AddEventModal/HeaderSaveButton';
-
 import useDarkMode from '@/hooks/feature/days/useDarkMode';
 
 const Stack = createNativeStackNavigator<NavigatorCallback>();
@@ -30,11 +28,12 @@ const Navigator = () => {
           component={AddEvent}
           options={{
             presentation: 'modal',
-            title: '',
-            headerRight: () => <HeaderSaveButton />,
-            headerStyle: {
-              backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-            },
+            headerShown: false,
+            // title: '',
+            // headerRight: () => <HeaderSaveButton />,
+            // headerStyle: {
+            //   backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+            // },
           }}
         />
       </Stack.Navigator>

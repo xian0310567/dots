@@ -10,7 +10,7 @@ const service = (state: TodoStateCallback): AddTodoCallback => {
     return todoCollection.add({
       name: state.name,
       color: state.color,
-      user: 'asdf',
+      user: '',
     });
   };
 
