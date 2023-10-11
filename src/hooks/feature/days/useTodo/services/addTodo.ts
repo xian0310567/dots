@@ -6,11 +6,11 @@ import {TodoStateCallback} from '../lib/useTodoState';
 export const todoCollection = firestore().collection('todo');
 
 const service = (state: TodoStateCallback): AddTodoCallback => {
-  const addTodo = () => {
+  const addTodo = (userId: string) => {
     return todoCollection.add({
       name: state.name,
       color: state.color,
-      user: '',
+      user: userId,
     });
   };
 

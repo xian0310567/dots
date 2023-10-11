@@ -1,3 +1,3 @@
 export type AddTodoCallback = {
-  addTodo: () => void;
+  addTodo: (userId: string) => void;
 };
