@@ -1,4 +1,6 @@
 export type ColorsCallback = {
+  selectedColor: string;
+  setSelectedColor: React.Dispatch<React.SetStateAction<string>>;
   colorList: Colors[];
 };
 

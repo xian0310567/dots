@@ -8,7 +8,7 @@ import styled from './lib/styled';
 
 const ColorChip = (props: ColorChipProps) => {
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={props.onPress}>
       <View style={{...styled.chip, backgroundColor: props.color.color}}></View>
     </TouchableOpacity>
   );

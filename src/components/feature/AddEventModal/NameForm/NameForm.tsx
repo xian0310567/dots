@@ -6,16 +6,16 @@ import ColorPicker from '@/components/feature/AddEventModal/ColorPicker';
 import useColors from '@/hooks/feature/days/useColors';
 
 const NameForm = () => {
-  const {colorList} = useColors();
+  const {colorList, selectedColor, setSelectedColor} = useColors();
 
   return (
     <Form>
       <Form.Item>
         <TextInput placeholder="제목" />
       </Form.Item>
-      <Divider />
+      <Divider color={selectedColor} />
       <Form.Item label="컬러">
-        <ColorPicker colors={colorList} />
+        <ColorPicker colors={colorList} setSelectedColor={setSelectedColor} />
       </Form.Item>
     </Form>
   );

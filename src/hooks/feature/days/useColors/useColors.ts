@@ -1,6 +1,8 @@
+import {useState} from 'react';
 import {ColorsCallback} from './lib/useColors';
 
 const useColors = (): ColorsCallback => {
+  const [selectedColor, setSelectedColor] = useState('');
   const colorList = [
     {
       name: 'peach',
@@ -20,7 +22,7 @@ const useColors = (): ColorsCallback => {
     },
   ];
 
-  return {colorList};
+  return {colorList, selectedColor, setSelectedColor};
 };
 
 export default useColors;

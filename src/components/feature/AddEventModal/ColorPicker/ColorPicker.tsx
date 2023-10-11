@@ -13,7 +13,12 @@ const ColorPicker = (props: ColorPickerProps) => {
       horizontal
       style={styled.colorPicker}
       data={props.colors}
-      renderItem={color => <ColorChip color={color.item} />}
+      renderItem={color => (
+        <ColorChip
+          color={color.item}
+          onPress={() => props.setSelectedColor(color.item.color)}
+        />
+      )}
       keyExtractor={color => color.color}
     />
   );
