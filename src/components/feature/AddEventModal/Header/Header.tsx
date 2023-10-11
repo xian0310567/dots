@@ -3,7 +3,7 @@ import React from 'react';
 import {View} from 'react-native';
 import HeaderSaveButton from '@/components/feature/AddEventModal/HeaderSaveButton';
 
-import useDarkMode from '@/hooks/feature/days/useDarkMode';
+import useDarkMode from '@/hooks/util/useDarkMode';
 import {useNavigation} from '@react-navigation/native';
 
 import {HeaderProps} from './lib/Header';

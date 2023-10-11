@@ -8,7 +8,7 @@ import {NavigatorCallback} from './lib/Navigator';
 import Home from '@/page/Home';
 import AddEvent from '@/modal/AddEvent';
 
-import useDarkMode from '@/hooks/feature/days/useDarkMode';
+import useDarkMode from '@/hooks/util/useDarkMode';
 
 const Stack = createNativeStackNavigator<NavigatorCallback>();
 

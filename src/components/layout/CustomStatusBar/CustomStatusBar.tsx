@@ -3,7 +3,7 @@ import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 import {StatusBar} from 'react-native';
 
-import useDarkMode from '@/hooks/feature/days/useDarkMode';
+import useDarkMode from '@/hooks/util/useDarkMode';
 
 const CustomStatusBar = () => {
   const isDarkMode = useDarkMode();

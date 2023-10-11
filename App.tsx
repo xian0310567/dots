@@ -7,7 +7,7 @@ import CustomStatusBar from '@/components/layout/CustomStatusBar';
 import Navigator from '@/components/layout/Navigator';
 import Footer from '@/components/layout/Footer';
 
-import useDarkMode from '@/hooks/feature/days/useDarkMode';
+import useDarkMode from '@/hooks/util/useDarkMode';
 
 function App(): JSX.Element {
   const isDarkMode = useDarkMode();
