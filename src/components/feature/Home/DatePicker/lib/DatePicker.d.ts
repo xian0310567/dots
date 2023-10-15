@@ -1,6 +1,7 @@
 import {ListRenderItemInfo} from 'react-native';
-import {useDaysCallback} from '@/hooks/useDays';
+import {GetAllDatesInThisMonthCallback} from '@/hooks/feature/days/useDays';
 
 export interface DatePickerProps {
-  date: ListRenderItemInfo<useDaysCallback>;
+  date: ListRenderItemInfo<GetAllDatesInThisMonthCallback>;
+  selectedDate?: string;
 }

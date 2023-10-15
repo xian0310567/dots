@@ -1,5 +1,5 @@
-import {useDaysCallback} from '@/hooks/useDays';
+import {GetAllDatesInThisMonthCallback} from '@/hooks/feature/days/useDays';
 
 export interface MonthlyPickerProps {
-  date: useDaysCallback[];
+  date: GetAllDatesInThisMonthCallback[];
 }
