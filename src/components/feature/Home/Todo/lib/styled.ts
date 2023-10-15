@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 
-const styled = (color: string) => {
+const styled = (color: string, textColor: string) => {
   return StyleSheet.create({
     container: {
       marginBottom: 10,
@@ -14,7 +14,7 @@ const styled = (color: string) => {
     },
     text: {
       fontSize: 14,
-      color: '#ccc',
+      color: textColor,
     },
   });
 };
