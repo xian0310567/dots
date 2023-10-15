@@ -19,7 +19,10 @@ const service = (state: TodoStateCallback): GetTodoCallback => {
         .get()
         .then(res => {
           res.forEach(single => {
-            todo.push(single.data() as TodoListResponse);
+            todo.push({
+              ...(single.data() as TodoListResponse),
+              id: single.id,
+            });
           });
 
           state.setTodoList(todo);

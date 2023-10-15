@@ -8,6 +8,7 @@ export type TodoStateCallback = {
 };
 
 export type TodoListResponse = {
+  id: string;
   user: string;
   name: string;
   color: string;
