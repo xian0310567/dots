@@ -1,16 +1,19 @@
-import firestore from '@react-native-firebase/firestore';
+import {useRecoilValue} from 'recoil';
+import todoCollection from '@/hooks/collection/todoCollection';
+
+import {userState} from '@/store/user';
 
 import {AddTodoCallback} from '../lib/serviceInterface/addTodo';
 import {TodoStateCallback} from '../lib/useTodoState';
 
-export const todoCollection = firestore().collection('todo');
-
 const service = (state: TodoStateCallback): AddTodoCallback => {
-  const addTodo = (userId: string) => {
+  const user = useRecoilValue(userState);
+
+  const addTodo = () => {
     return todoCollection.add({
       name: state.name,
       color: state.color,
-      user: userId,
+      user: user,
     });
   };
 

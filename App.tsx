@@ -1,8 +1,8 @@
-import React from 'react';
 import {Colors} from 'react-native/Libraries/NewAppScreen';
 
 import {RecoilRoot} from 'recoil';
 import {SafeAreaView} from 'react-native';
+import InitializerEffector from '@/components/provider/InitializerEffector';
 import CustomStatusBar from '@/components/layout/CustomStatusBar';
 import Navigator from '@/components/layout/Navigator';
 import Footer from '@/components/layout/Footer';
@@ -19,11 +19,13 @@ function App(): JSX.Element {
 
   return (
     <RecoilRoot>
-      <SafeAreaView style={backgroundStyle}>
-        <CustomStatusBar />
-        <Navigator />
-        <Footer />
-      </SafeAreaView>
+      <InitializerEffector>
+        <SafeAreaView style={backgroundStyle}>
+          <CustomStatusBar />
+          <Navigator />
+          <Footer />
+        </SafeAreaView>
+      </InitializerEffector>
     </RecoilRoot>
   );
 }

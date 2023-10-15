@@ -29,11 +29,6 @@ const Navigator = () => {
           options={{
             presentation: 'modal',
             headerShown: false,
-            // title: '',
-            // headerRight: () => <HeaderSaveButton />,
-            // headerStyle: {
-            //   backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-            // },
           }}
         />
       </Stack.Navigator>
