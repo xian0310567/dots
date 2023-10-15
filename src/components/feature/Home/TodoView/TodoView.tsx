@@ -15,7 +15,7 @@ const TodoView = (props: TodoViewProps) => {
         keyExtractor={todo => todo.id}
         renderItem={todo => <Todo todo={todo} />}
       />
-      <AddTodo />
+      {/* <AddTodo /> */}
     </View>
   );
 };
