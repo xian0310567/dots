@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Header from '@/components/feature/Home/Header';
 import Container from '@/components/atom/Container';
 import MonthlyPicker from '@/components/feature/Home/MonthlyPicker';
 import TodoView from '@/components/feature/Home/TodoView';
@@ -14,6 +15,7 @@ const Home = () => {
 
   return (
     <Container>
+      <Header />
       <MonthlyPicker date={useGetAllDatesInThisMonth()} />
       <TodoView todoList={todoList} />
     </Container>
