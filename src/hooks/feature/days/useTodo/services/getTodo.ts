@@ -3,12 +3,14 @@ import {useRecoilValue} from 'recoil';
 import todoCollection from '@/hooks/collection/todoCollection';
 
 import {userState} from '@/store/user';
+import {todoValidateState} from '@/store/todoValidate';
 
 import {GetTodoCallback} from '../lib/serviceInterface/getTodo';
 import {TodoStateCallback, TodoListResponse} from '../lib/useTodoState';
 
 const service = (state: TodoStateCallback): GetTodoCallback => {
   const user = useRecoilValue(userState);
+  const todoValidate = useRecoilValue(todoValidateState);
 
   let todo: TodoListResponse[] = [];
 
@@ -27,7 +29,7 @@ const service = (state: TodoStateCallback): GetTodoCallback => {
 
           state.setTodoList(todo);
         });
-    }, [user]);
+    }, [user, todoValidate]);
 
     return {
       todoList: state.todoList,
