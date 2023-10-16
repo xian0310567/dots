@@ -3,7 +3,7 @@ import TextInput from '@/components/atom/TextInput';
 import Divider from '@/components/atom/Divider';
 import ColorPicker from '@/components/feature/AddEventModal/ColorPicker';
 
-import useColors from '@/hooks/feature/days/useColors';
+import useColors from '@/hooks/feature/todo/useColors';
 
 import {NameFormProps} from './lib/NameForm';
 

@@ -6,7 +6,7 @@ import MonthlyPicker from '@/components/feature/Home/MonthlyPicker';
 import TodoView from '@/components/feature/Home/TodoView';
 
 import useDays from '@/hooks/feature/days/useDays';
-import useTodo from '@/hooks/feature/days/useTodo';
+import useTodo from '@/hooks/feature/todo/useTodo';
 
 const Home = () => {
   const {useGetAllDatesInThisMonth} = useDays();

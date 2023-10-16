@@ -1,4 +1,4 @@
-import {TodoListResponse} from '@/hooks/feature/days/useTodo';
+import {TodoListResponse} from '@/hooks/feature/todo/useTodo';
 
 export type TodoViewProps = {
   todoList: TodoListResponse[];
