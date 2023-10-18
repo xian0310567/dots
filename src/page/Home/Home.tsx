@@ -14,6 +14,8 @@ const Home = () => {
 
   const todo = useRecoilValue(todoState);
 
+  console.log(todo);
+
   return (
     <Container>
       <Header />

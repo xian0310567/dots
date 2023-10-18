@@ -1,5 +1,5 @@
 import {useEffect} from 'react';
-import {useRecoilValue, useSetRecoilState} from 'recoil';
+import {useRecoilValue, useRecoilState} from 'recoil';
 import todoCollection from '@/hooks/collection/todoCollection';
 
 import {userState} from '@/store/user';
@@ -10,25 +10,26 @@ import {TodoStateCallback, TodoListResponse} from '../lib/useTodoState';
 
 const service = (state: TodoStateCallback): GetTodoCallback => {
   const user = useRecoilValue(userState);
-  const setTodo = useSetRecoilState(todoState);
+  const [todo, setTodo] = useRecoilState(todoState);
 
   let todoTemp: TodoListResponse[] = [];
 
   const getTodo = () => {
     useEffect(() => {
-      todoCollection
-        .where('user', '==', user)
-        .get()
-        .then(res => {
-          res.forEach(single => {
-            todoTemp.push({
-              ...(single.data() as TodoListResponse),
-              id: single.id,
+      if (user) {
+        todoCollection
+          .where('user', '==', user)
+          .get()
+          .then(res => {
+            res.forEach(single => {
+              todoTemp.push({
+                ...(single.data() as TodoListResponse),
+                id: single.id,
+              });
             });
+            setTodo(todoTemp);
           });
-
-          setTodo(todoTemp);
-        });
+      }
     }, [user]);
 
     return {
