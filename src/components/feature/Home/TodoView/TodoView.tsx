@@ -1,7 +1,6 @@
 import {View, FlatList} from 'react-native';
 
 import Todo from '@/components/feature/Home/Todo';
-import AddTodo from '@/components/feature/Home/AddTodo';
 
 import {TodoViewProps} from './lib/TodoView';
 
@@ -15,7 +14,6 @@ const TodoView = (props: TodoViewProps) => {
         keyExtractor={todo => todo.id}
         renderItem={todo => <Todo todo={todo} />}
       />
-      {/* <AddTodo /> */}
     </View>
   );
 };
