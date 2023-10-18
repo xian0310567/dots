@@ -8,12 +8,15 @@ const styled = (color: string, textColor: string) => {
     todo: {
       backgroundColor: color,
       borderRadius: 10,
-      height: 60,
+      height: 70,
       paddingHorizontal: 20,
-      justifyContent: 'center',
+      alignItems: 'center',
+      display: 'flex',
+      flexDirection: 'row',
     },
     text: {
       fontSize: 14,
+      marginLeft: 15,
       color: textColor,
     },
   });

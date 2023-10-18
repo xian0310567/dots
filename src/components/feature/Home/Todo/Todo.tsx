@@ -1,5 +1,7 @@
 import React from 'react';
+
 import {View, Text, TouchableOpacity} from 'react-native';
+import CheckBox from '@/components/atom/CheckBox';
 
 import useGetTextColorByBackgroundColor from '@/hooks/util/useGetTextColorByBackgroundColor';
 
@@ -16,6 +18,7 @@ const Todo = (props: TodoProps) => {
   return (
     <TouchableOpacity style={styled.container}>
       <View style={styled.todo}>
+        <CheckBox defaultColor={textColor} />
         <Text style={styled.text}>{todo.name}</Text>
       </View>
     </TouchableOpacity>
