@@ -6,7 +6,7 @@ const styled = () => {
       height: 40,
       display: 'flex',
       flexDirection: 'row',
-      justifyContent: 'flex-end',
+      justifyContent: 'space-between',
       // borderBottomWidth: 0.5,
       // borderBottomColor: '#aaa',
     },
