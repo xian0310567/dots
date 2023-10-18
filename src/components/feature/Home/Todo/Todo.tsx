@@ -11,6 +11,7 @@ import style from './lib/styled';
 
 const Todo = (props: TodoProps) => {
   const todo = props.todo.item;
+  console.log(props.todo.item);
 
   const textColor = useGetTextColorByBackgroundColor(todo.color);
   const styled = style(todo.color, textColor);
@@ -18,7 +19,7 @@ const Todo = (props: TodoProps) => {
   return (
     <TouchableOpacity style={styled.container}>
       <View style={styled.todo}>
-        <CheckBox defaultColor={textColor} />
+        <CheckBox defaultColor={textColor} value={false} />
         <Text style={styled.text}>{todo.name}</Text>
       </View>
     </TouchableOpacity>

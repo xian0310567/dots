@@ -14,15 +14,14 @@ const CheckBox = (props: CheckBoxProps) => {
       : 'rgba(0, 0, 0, 0.5)';
 
   const styled = style(color);
-  const [isChecked, setIsChecked] = useState(false);
 
   return (
     <TouchableOpacity
       style={[styled.checkbox, props.style]}
       onPress={() => {
-        setIsChecked(check => !check);
+        props.onPress;
       }}>
-      <Check isChecked={isChecked} defaultColor={color} />
+      <Check isChecked={props.value} defaultColor={color} />
     </TouchableOpacity>
   );
 };
@@ -30,7 +29,7 @@ const CheckBox = (props: CheckBoxProps) => {
 const Check = (props: CheckProps) => {
   if (!props.isChecked) return <></>;
 
-  return <Icon name="check" size={15} color={props.defaultColor} />;
+  return <Icon name="check" size={12} color={props.defaultColor} />;
 };
 
 export default CheckBox;
