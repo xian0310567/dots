@@ -8,13 +8,10 @@ import TodoView from '@/components/feature/Home/TodoView';
 
 import {todoState} from '@/store/todo';
 import useDays from '@/hooks/feature/days/useDays';
-import useTodo from '@/hooks/feature/todo/useTodo';
 
 const Home = () => {
   const {useGetAllDatesInThisMonth} = useDays();
-  const {getTodo} = useTodo();
 
-  getTodo();
   const todo = useRecoilValue(todoState);
 
   return (
