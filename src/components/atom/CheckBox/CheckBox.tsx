@@ -18,9 +18,7 @@ const CheckBox = (props: CheckBoxProps) => {
   return (
     <TouchableOpacity
       style={[styled.checkbox, props.style]}
-      onPress={() => {
-        props.onPress;
-      }}>
+      onPress={props.onPress}>
       <Check isChecked={props.value} defaultColor={color} />
     </TouchableOpacity>
   );
