@@ -18,7 +18,13 @@ const service = (): DeleteClearTodoCallback => {
       }),
     );
 
-    return clearTodoCollection.doc(id).delete();
+    return clearTodoCollection
+      .where('date', '==', selectedDate)
+      .where('todo', '==', id)
+      .get()
+      .then(res => {
+        clearTodoCollection.doc(res.docs[0].data().id).delete();
+      });
   };
 
   return {deleteClearTodo};
