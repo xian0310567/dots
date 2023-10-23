@@ -24,7 +24,11 @@ const Todo = (props: TodoProps) => {
         <CheckBox
           defaultColor={textColor}
           value={props.clear}
-          onPress={() => addClearTodo(todo.id)}
+          onPress={() => {
+            if (props.clear) {
+            }
+            if (!props.clear) addClearTodo(todo.id);
+          }}
         />
         <Text style={styled.text}>{todo.name}</Text>
       </View>
