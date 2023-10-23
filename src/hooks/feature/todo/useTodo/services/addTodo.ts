@@ -26,6 +26,7 @@ const service = (state: TodoStateCallback): AddTodoCallback => {
     ]);
 
     return todoCollection.doc(id).set({
+      id: id,
       name: state.name,
       color: state.color,
       user: user,

@@ -28,6 +28,7 @@ const service = (): AddClearTodoCallback => {
     ]);
 
     return clearTodoCollection.doc(id).set({
+      id: id,
       todo: todo,
       date: selectedDate,
       user: user,
