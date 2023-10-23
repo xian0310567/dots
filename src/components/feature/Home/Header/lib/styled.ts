@@ -10,6 +10,11 @@ const styled = () => {
       // borderBottomWidth: 0.5,
       // borderBottomColor: '#aaa',
     },
+    alignSpace: {
+      display: 'flex',
+      flexDirection: 'row',
+      alignItems: 'center',
+    },
   });
 };
 
