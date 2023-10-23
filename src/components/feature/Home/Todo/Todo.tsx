@@ -13,7 +13,7 @@ import style from './lib/styled';
 const Todo = (props: TodoProps) => {
   const todo = props.todo.item;
 
-  const {addClearTodo} = useClearTodo();
+  const {addClearTodo, deleteClearTodo} = useClearTodo();
 
   const textColor = useGetTextColorByBackgroundColor(todo.color);
   const styled = style(todo.color, textColor);
@@ -25,8 +25,7 @@ const Todo = (props: TodoProps) => {
           defaultColor={textColor}
           value={props.clear}
           onPress={() => {
-            if (props.clear) {
-            }
+            if (props.clear) deleteClearTodo(todo.id);
             if (!props.clear) addClearTodo(todo.id);
           }}
         />
