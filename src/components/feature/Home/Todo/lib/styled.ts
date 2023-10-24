@@ -3,7 +3,7 @@ import {StyleSheet} from 'react-native';
 const styled = (color: string, textColor: string) => {
   return StyleSheet.create({
     container: {
-      marginBottom: 10,
+      marginBottom: 5,
     },
     todo: {
       backgroundColor: color,
