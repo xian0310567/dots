@@ -5,8 +5,8 @@ const styled = () => {
     date: {
       color: '#fff',
       marginLeft: 10,
-      fontSize: 14,
-      fontWeight: '500',
+      fontSize: 16,
+      fontWeight: '700',
     },
   });
 };
