@@ -5,7 +5,6 @@ import {SafeAreaView} from 'react-native';
 import InitializerEffector from '@/components/provider/InitializerEffector';
 import CustomStatusBar from '@/components/layout/CustomStatusBar';
 import Navigator from '@/components/layout/Navigator';
-import Footer from '@/components/layout/Footer';
 
 import useDarkMode from '@/hooks/util/useDarkMode';
 
@@ -23,7 +22,6 @@ function App(): JSX.Element {
         <SafeAreaView style={backgroundStyle}>
           <CustomStatusBar />
           <Navigator />
-          <Footer />
         </SafeAreaView>
       </InitializerEffector>
     </RecoilRoot>
