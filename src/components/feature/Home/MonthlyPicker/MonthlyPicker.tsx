@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import {useRecoilValue} from 'recoil';
 
-import {View, FlatList} from 'react-native';
+import {View, FlatList, Button} from 'react-native';
 import DatePicker from '@/components/feature/Home/DatePicker';
 
 import {selectedDateState} from '@/store/selectedDate';
@@ -18,10 +18,14 @@ const MonthlyPicker = (props: MonthlyPickerProps) => {
       <FlatList
         horizontal
         data={props.date}
+        showsHorizontalScrollIndicator={false}
+        // pagingEnabled={true}
         renderItem={date => (
           <DatePicker date={date} selectedDate={selectedDate} />
         )}
         keyExtractor={item => item.date}
+        // initialScrollIndex={props.date.length - 1}
+        ListEmptyComponent={<View></View>}
       />
     </View>
   );
