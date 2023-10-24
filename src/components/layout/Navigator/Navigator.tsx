@@ -7,6 +7,7 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {NavigatorCallback} from './lib/Navigator';
 
+import {Text} from 'react-native';
 import Home from '@/page/Home';
 import AddEvent from '@/modal/AddEvent';
 import My from '@/page/My';
@@ -20,25 +21,33 @@ const ModalStackNavigator = () => {
   const isDarkMode = useDarkMode();
 
   return (
-    <Tabs.Navigator initialRouteName="Home">
+    <Tabs.Navigator
+      initialRouteName="Home"
+      screenOptions={({route}) => ({
+        headerShown: false,
+        tabBarActiveTintColor: '#fff',
+        tabBarStyle: {
+          backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
+        },
+      })}>
       <Tabs.Screen
         name="Home"
         component={Home}
         options={{
-          headerShown: false,
           tabBarIcon: ({color, size}) => (
             <Icon name="home" size={20} color={color} />
           ),
+          tabBarLabel: () => <></>,
         }}
       />
       <Tabs.Screen
         name="My"
         component={My}
         options={{
-          headerShown: false,
           tabBarIcon: ({color, size}) => (
             <Icon name="user-circle" size={20} color={color} />
           ),
+          tabBarLabel: () => <></>,
         }}
       />
     </Tabs.Navigator>
