@@ -13,19 +13,23 @@ import styled from './lib/styled';
 const MonthlyPicker = (props: MonthlyPickerProps) => {
   const selectedDate = useRecoilValue(selectedDateState);
 
+  const scrollView = useRef<FlatList>(null);
+
   return (
     <View style={styled.container}>
       <FlatList
+        ref={scrollView}
         horizontal
         data={props.date}
         showsHorizontalScrollIndicator={false}
-        // pagingEnabled={true}
         renderItem={date => (
           <DatePicker date={date} selectedDate={selectedDate} />
         )}
         keyExtractor={item => item.date}
-        // initialScrollIndex={props.date.length - 1}
         ListEmptyComponent={<View></View>}
+        onContentSizeChange={() => {
+          scrollView.current?.scrollToEnd({animated: true});
+        }}
       />
     </View>
   );
