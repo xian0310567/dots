@@ -1,15 +1,19 @@
 import React from 'react';
+import Icon from 'react-native-vector-icons/Feather';
 
-import {View} from 'react-native';
+import {Container, Space, Text} from './lib/styled';
 
 import {MenuProps} from './lib/Menu';
 
-import style from './lib/styled';
-
 const Menu = (props: MenuProps) => {
-  const styled = style();
-
-  return <View style={styled.container}>{props.children}</View>;
+  return (
+    <Container onPress={props.onPress}>
+      <Space>
+        <Text>{props.children}</Text>
+        <Icon name="chevron-right" size={26} color="#adadad" />
+      </Space>
+    </Container>
+  );
 };
 
 export default Menu;
