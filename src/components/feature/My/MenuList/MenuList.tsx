@@ -1,6 +1,7 @@
 import React from 'react';
 
-import {Container, Space} from './lib/styled';
+import {Container} from './lib/styled';
+import Space from '@/components/atom/Space';
 import Menu from '@/components/feature/My/Menu';
 
 import {MenuListProps} from './lib/MenuList';
