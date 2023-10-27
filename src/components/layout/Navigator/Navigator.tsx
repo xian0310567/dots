@@ -5,7 +5,7 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {NavigatorCallback} from './lib/Navigator';
+import {NavigatorCallback, TabsCallback} from './lib/Navigator';
 
 import {Text} from 'react-native';
 import Home from '@/page/Home';
@@ -14,8 +14,8 @@ import My from '@/page/My';
 
 import useDarkMode from '@/hooks/util/useDarkMode';
 
+const Tabs = createBottomTabNavigator<TabsCallback>();
 const Stack = createNativeStackNavigator<NavigatorCallback>();
-const Tabs = createBottomTabNavigator<NavigatorCallback>();
 
 const ModalStackNavigator = () => {
   const isDarkMode = useDarkMode();
