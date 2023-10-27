@@ -3,6 +3,7 @@ export type SystemMenuCallback = {
 };
 
 export type SystemMenus = {
+  key: number | string;
   title: string;
   directionType: 'url' | 'route';
   url: string;
