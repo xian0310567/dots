@@ -1,6 +1,8 @@
 import React from 'react';
 import {useRecoilValue} from 'recoil';
 
+import LottieView from 'lottie-react-native';
+
 import Header from '@/components/feature/Home/Header';
 import Container from '@/components/atom/Container';
 import MonthlyPicker from '@/components/feature/Home/MonthlyPicker';
@@ -19,6 +21,11 @@ const Home = () => {
       <Header />
       <MonthlyPicker date={useGetAllDatesInThisMonth()} />
       <TodoView todoList={todo} />
+      <LottieView
+        source={require('@/assets/animation/loader.json')}
+        autoPlay
+        loop
+      />
     </Container>
   );
 };
