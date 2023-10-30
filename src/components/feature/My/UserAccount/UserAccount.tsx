@@ -1,9 +1,14 @@
 import React from 'react';
 
-import {View} from 'react-native';
+import {Container} from './lib/styled';
+import Space from '@/components/atom/Space';
 
 const UserAccount = () => {
-  return <View></View>;
+  return (
+    <Container>
+      <Space></Space>
+    </Container>
+  );
 };
 
 export default UserAccount;
