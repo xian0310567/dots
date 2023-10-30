@@ -1,5 +1,6 @@
 import {View, FlatList} from 'react-native';
 import Todo from '@/components/feature/Home/Todo';
+import LottieView from 'lottie-react-native';
 
 import useClearTodo from '@/hooks/feature/todo/useClearTodo';
 
@@ -16,6 +17,15 @@ const TodoView = (props: TodoViewProps) => {
   const clearTodo = (todo: TodoListResponse) => {
     return !!clear.find(clear => clear.todo == todo.id);
   };
+
+  if (!props.todoList)
+    return (
+      <LottieView
+        source={require('@/assets/animation/loader.json')}
+        autoPlay
+        loop
+      />
+    );
 
   return (
     <View style={styled.container}>
