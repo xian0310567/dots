@@ -9,6 +9,7 @@ const styled = (props: ContainerProps & {isDarkMode: boolean}) => {
       padding: props.padding,
       backgroundColor: props.isDarkMode ? Colors.darker : Colors.lighter,
       flex: 1,
+      position: 'relative',
     },
   });
 };
