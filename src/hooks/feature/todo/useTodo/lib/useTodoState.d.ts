@@ -1,13 +1,13 @@
-import {TodoListResponse} from '@/hooks/feature/todo/useTodoList';
+import {TodoResponse} from '@/hooks/feature/todo/useTodoList';
 
 export type TodoStateCallback = {
-  todo: TodoListResponse;
-  setTodo: React.Dispatch<React.SetStateAction<TodoListResponse>>;
-  getProperty: <K extends keyof TodoListResponse>(
+  todo: TodoResponse;
+  setTodo: React.Dispatch<React.SetStateAction<TodoResponse>>;
+  getProperty: <K extends keyof TodoResponse>(
     key: K,
-  ) => TodoListResponse[K] | undefined;
-  setProperty: <K extends keyof TodoListResponse>(
+  ) => TodoResponse[K] | undefined;
+  setProperty: <K extends keyof TodoResponse>(
     key: K,
-    value: TodoListResponse[K],
+    value: TodoResponse[K],
   ) => void;
 };

@@ -1,11 +1,11 @@
-export type TodoStateCallback = {
+export type TodoListStateCallback = {
   name: string;
   setName: React.Dispatch<React.SetStateAction<string>>;
   color: string;
   setColor: React.Dispatch<React.SetStateAction<string>>;
 };
 
-export type TodoListResponse = {
+export type TodoResponse = {
   id: string;
   user: string;
   name: string;

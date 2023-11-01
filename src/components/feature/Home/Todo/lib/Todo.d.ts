@@ -1,7 +1,7 @@
 import {ListRenderItemInfo} from 'react-native';
-import {TodoListResponse} from '@/hooks/feature/todo/useTodo';
+import {TodoResponse} from '@/hooks/feature/todo/useTodo';
 
 export type TodoProps = {
-  todo: ListRenderItemInfo<TodoListResponse>;
+  todo: ListRenderItemInfo<TodoResponse>;
   clear: boolean;
 };

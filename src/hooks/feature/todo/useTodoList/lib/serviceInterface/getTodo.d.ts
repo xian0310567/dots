@@ -1,5 +1,5 @@
-import {TodoListResponse} from '../useTodoState';
+import {TodoResponse} from '../useTodoListState';
 
 export type GetTodoCallback = {
-  getTodo: () => {todoList: TodoListResponse[]};
+  getTodo: () => {todoList: TodoResponse[]};
 };

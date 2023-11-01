@@ -9,14 +9,13 @@ import useTodoList from '@/hooks/feature/todo/useTodoList';
 import useTodo from '@/hooks/feature/todo/useTodo/useTodo';
 
 const SetTodo = () => {
-  const {addTodo, setColor, setName} = useTodoList();
   const todo = useTodo();
 
   return (
     <>
-      <Header addTodo={() => addTodo()} />
+      {/* <Header addTodo={() => addTodo()} /> */}
       <Container padding={30}>
-        <NameForm setColor={setColor} setName={setName} />
+        {/* <NameForm setColor={setColor} setName={setName} /> */}
       </Container>
       <SaveFloating />
     </>

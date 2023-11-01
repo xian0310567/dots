@@ -1,6 +1,6 @@
 import {useState} from 'react';
 
-import {TodoStateCallback} from './lib/useTodoState';
+import {TodoStateCallback} from './lib/useTodoListState';
 
 const useTodoState = (): TodoStateCallback => {
   // todo 생성용

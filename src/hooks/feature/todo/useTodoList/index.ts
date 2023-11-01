@@ -1,3 +1,3 @@
-export {default} from './useTodo';
+export {default} from './useTodoList';
 
-export type {TodoListResponse} from './lib/useTodoState';
+export type {TodoResponse} from './lib/useTodoListState';

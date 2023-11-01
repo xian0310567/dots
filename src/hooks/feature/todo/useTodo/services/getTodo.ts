@@ -2,7 +2,7 @@ import todoCollection from '@/hooks/collection/todoCollection';
 
 import {GetTodoCallback} from '../lib/serviceInterface/getTodo';
 import {TodoStateCallback} from '../lib/useTodoState';
-import {TodoListResponse} from '@/hooks/feature/todo/useTodoList';
+import {TodoResponse} from '@/hooks/feature/todo/useTodoList';
 
 const service = (state: TodoStateCallback): GetTodoCallback => {
   const getTodo = (todo: string) => {
@@ -11,7 +11,7 @@ const service = (state: TodoStateCallback): GetTodoCallback => {
       .get()
       .then(res => {
         res.forEach(single => {
-          state.setTodo(single.data() as TodoListResponse);
+          state.setTodo(single.data() as TodoResponse);
         });
       });
   };

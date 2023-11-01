@@ -1,23 +1,23 @@
 import {useState} from 'react';
 
 import {TodoStateCallback} from './lib/useTodoState';
-import {TodoListResponse} from '@/hooks/feature/todo/useTodoList';
+import {TodoResponse} from '@/hooks/feature/todo/useTodoList';
 
 const useTodoState = (): TodoStateCallback => {
-  const [todo, setTodo] = useState<TodoListResponse>({
+  const [todo, setTodo] = useState<TodoResponse>({
     id: '',
     user: '',
     name: '',
     color: '',
   });
 
-  const getProperty = <K extends keyof TodoListResponse>(key: K) => {
+  const getProperty = <K extends keyof TodoResponse>(key: K) => {
     if (todo) return todo[key];
   };
 
-  const setProperty = <K extends keyof TodoListResponse>(
+  const setProperty = <K extends keyof TodoResponse>(
     key: K,
-    value: TodoListResponse[K],
+    value: TodoResponse[K],
   ) =>
     setTodo(prev => {
       return {...prev, [key]: value};

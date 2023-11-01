@@ -1,5 +1,5 @@
-import {TodoStateCallback} from '../lib/useTodoState';
-import {TodoServiceCallback} from '../lib/useTodoService';
+import {TodoStateCallback} from '../lib/useTodoListState';
+import {TodoServiceCallback} from '../lib/useTodoListService';
 
 import addTodoService from './addTodo';
 import getTodoService from './getTodo';

@@ -5,7 +5,7 @@ import LottieView from 'lottie-react-native';
 import useClearTodo from '@/hooks/feature/todo/useClearTodo';
 
 import {TodoViewProps} from './lib/TodoView';
-import {TodoListResponse} from '@/hooks/feature/todo/useTodo';
+import {TodoResponse} from '@/hooks/feature/todo/useTodoList';
 
 import styled from './lib/styled';
 
@@ -14,7 +14,7 @@ const TodoView = (props: TodoViewProps) => {
 
   const clear = toDayClearTodo();
 
-  const clearTodo = (todo: TodoListResponse) => {
+  const clearTodo = (todo: TodoResponse) => {
     return !!clear.find(clear => clear.todo == todo.id);
   };
 

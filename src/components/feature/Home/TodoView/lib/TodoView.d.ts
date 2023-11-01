@@ -1,5 +1,5 @@
-import {TodoListResponse} from '@/hooks/feature/todo/useTodo';
+import {TodoResponse} from '@/hooks/feature/todo/useTodoList';
 
 export type TodoViewProps = {
-  todoList: TodoListResponse[];
+  todoList: TodoResponse[];
 };

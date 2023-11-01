@@ -6,7 +6,7 @@ import {todoState} from '@/store/todo';
 import useUUID from '@/hooks/util/useUUID';
 
 import {AddTodoCallback} from '../lib/serviceInterface/addTodo';
-import {TodoStateCallback} from '../lib/useTodoState';
+import {TodoStateCallback} from '../lib/useTodoListState';
 
 const service = (state: TodoStateCallback): AddTodoCallback => {
   const user = useRecoilValue(userState);
