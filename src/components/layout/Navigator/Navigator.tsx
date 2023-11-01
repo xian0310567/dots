@@ -7,9 +7,9 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {NavigatorCallback, TabsCallback} from './lib/Navigator';
 
-import {Text} from 'react-native';
 import Home from '@/page/Home';
 import AddEvent from '@/modal/AddEvent';
+import SetTodo from '@/modal/SetTodo';
 import My from '@/page/My';
 
 import useDarkMode from '@/hooks/util/useDarkMode';
@@ -66,6 +66,14 @@ const Navigator = () => {
         <Stack.Screen
           name="AddEvent"
           component={AddEvent}
+          options={{
+            presentation: 'modal',
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="SetTodo"
+          component={SetTodo}
           options={{
             presentation: 'modal',
             headerShown: false,
