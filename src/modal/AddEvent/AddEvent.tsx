@@ -3,7 +3,7 @@ import Container from '@/components/atom/Container';
 import NameForm from '@/components/feature/AddEventModal/NameForm';
 import SaveFloating from '@/components/feature/AddEventModal/SaveFloating';
 
-import useTodo from '@/hooks/feature/todo/useTodo';
+import useTodo from '@/hooks/feature/todo/useTodoList';
 
 const AddEvent = () => {
   const {addTodo, setColor, setName} = useTodo();
