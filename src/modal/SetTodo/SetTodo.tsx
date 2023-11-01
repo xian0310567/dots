@@ -5,10 +5,12 @@ import Container from '@/components/atom/Container';
 import NameForm from '@/components/feature/AddEventModal/NameForm';
 import SaveFloating from '@/components/feature/AddEventModal/SaveFloating';
 
-import useTodo from '@/hooks/feature/todo/useTodoList';
+import useTodoList from '@/hooks/feature/todo/useTodoList';
+import useTodo from '@/hooks/feature/todo/useTodo/useTodo';
 
 const SetTodo = () => {
-  const {addTodo, setColor, setName} = useTodo();
+  const {addTodo, setColor, setName} = useTodoList();
+  const todo = useTodo();
 
   return (
     <>
