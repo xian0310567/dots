@@ -1,15 +1,24 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import Header from '@/components/feature/AddEventModal/Header';
 import Container from '@/components/atom/Container';
 import NameForm from '@/components/feature/AddEventModal/NameForm';
 import SaveFloating from '@/components/feature/AddEventModal/SaveFloating';
 
-import useTodoList from '@/hooks/feature/todo/useTodoList';
 import useTodo from '@/hooks/feature/todo/useTodo/useTodo';
 
-const SetTodo = () => {
+import {NativeStackScreenProps} from '@react-navigation/native-stack';
+import {NavigatorCallback} from '@/components/layout/Navigator';
+
+type Props = NativeStackScreenProps<NavigatorCallback, 'SetTodo'>;
+
+const SetTodo = (props: Props) => {
+  const todoId = props.route.params.todoId;
   const todo = useTodo();
+
+  useEffect(() => {
+    todo.getTodo(todoId);
+  }, []);
 
   return (
     <>

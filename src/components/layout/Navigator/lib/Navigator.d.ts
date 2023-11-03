@@ -6,6 +6,6 @@ export type TabsCallback = {
 export type NavigatorCallback = {
   ModalStack: undefined;
   AddEvent: undefined;
-  SetTodo: undefined;
+  SetTodo: {todoId: string};
   main: undefined;
 };

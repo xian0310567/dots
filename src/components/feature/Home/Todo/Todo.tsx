@@ -26,7 +26,7 @@ const Todo = (props: TodoProps) => {
   return (
     <TouchableOpacity
       style={styled.container}
-      onPress={() => router.navigate('SetTodo')}>
+      onPress={() => router.navigate('SetTodo', {todoId: props.todo.item.id})}>
       <View style={styled.todo}>
         <CheckBox
           defaultColor={textColor}
