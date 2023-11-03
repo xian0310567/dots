@@ -1,8 +1,8 @@
 import {useState} from 'react';
 
-import {TodoStateCallback} from './lib/useTodoListState';
+import {TodoListStateCallback} from './lib/useTodoListState';
 
-const useTodoState = (): TodoStateCallback => {
+const useTodoState = (): TodoListStateCallback => {
   // todo 생성용
   const [name, setName] = useState('');
   const [color, setColor] = useState('');
