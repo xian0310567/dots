@@ -24,7 +24,12 @@ const SetTodo = (props: Props) => {
     <>
       {/* <Header addTodo={() => addTodo()} /> */}
       <Container padding={30}>
-        {/* <NameForm setColor={setColor} setName={setName} /> */}
+        <NameForm
+          color={todo.getProperty('color')}
+          setColor={() => {}}
+          name={todo.getProperty('name')}
+          setName={() => {}}
+        />
       </Container>
       <SaveFloating />
     </>

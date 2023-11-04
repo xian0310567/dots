@@ -12,7 +12,12 @@ const AddEvent = () => {
     <>
       <Header addTodo={() => addTodo()} />
       <Container padding={30}>
-        <NameForm setColor={setColor} setName={setName} />
+        <NameForm
+          color={color}
+          setColor={setColor}
+          name={name}
+          setName={setName}
+        />
       </Container>
       <SaveFloating />
     </>

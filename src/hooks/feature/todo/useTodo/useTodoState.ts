@@ -11,9 +11,7 @@ const useTodoState = (): TodoStateCallback => {
     color: '',
   });
 
-  const getProperty = <K extends keyof TodoResponse>(key: K) => {
-    if (todo) return todo[key];
-  };
+  const getProperty = <K extends keyof TodoResponse>(key: K) => todo[key];
 
   const setProperty = <K extends keyof TodoResponse>(
     key: K,

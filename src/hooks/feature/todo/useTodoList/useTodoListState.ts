@@ -5,7 +5,7 @@ import {TodoListStateCallback} from './lib/useTodoListState';
 const useTodoState = (): TodoListStateCallback => {
   // todo 생성용
   const [name, setName] = useState('');
-  const [color, setColor] = useState('');
+  const [color, setColor] = useState('#F4BFBF');
 
   return {
     name,
