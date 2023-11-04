@@ -7,7 +7,9 @@ import {FormProps} from './lib/Form';
 import styled from './lib/styled';
 
 const Form = (props: FormProps) => {
-  return <View style={styled.container}>{props.children}</View>;
+  return (
+    <View style={{...styled.container, ...props.style}}>{props.children}</View>
+  );
 };
 
 Form.Item = Item;

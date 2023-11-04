@@ -1,19 +1,23 @@
-import {ColorPicker} from './lib/styled';
+import {ColorPicker, Input} from './lib/styled';
 import Form from '@/components/atom/Form';
-import TextInput from '@/components/atom/TextInput';
 
 import useColors from '@/hooks/feature/todo/useColors';
+import useGetTextColorByBackgroundColor from '@/hooks/util/useGetTextColorByBackgroundColor';
 
 import {NameFormProps} from './lib/NameForm';
 
 const NameForm = (props: NameFormProps) => {
   const {colorList, selectedColor, setSelectedColor} = useColors();
 
+  const color = useGetTextColorByBackgroundColor(selectedColor);
+
   return (
     <>
-      <Form>
+      <Form style={{backgroundColor: selectedColor}}>
         <Form.Item>
-          <TextInput
+          <Input
+            color={color}
+            placeholderTextColor={color}
             placeholder="제목"
             onChange={e => {
               props.setName(e.nativeEvent.text);

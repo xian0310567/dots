@@ -2,7 +2,7 @@ import {useState} from 'react';
 import {ColorsCallback} from './lib/useColors';
 
 const useColors = (): ColorsCallback => {
-  const [selectedColor, setSelectedColor] = useState('');
+  const [selectedColor, setSelectedColor] = useState('#F4BFBF');
   const colorList = [
     {
       name: 'peach',

@@ -6,7 +6,7 @@ import {TextInputProps} from './lib/TextInput';
 import styled from './lib/styled';
 
 const TextInput = (props: TextInputProps) => {
-  return <Input style={{...props.style, ...styled.input}} {...props} />;
+  return <Input style={{...styled.input, ...props.style}} {...props} />;
 };
 
 export default TextInput;
