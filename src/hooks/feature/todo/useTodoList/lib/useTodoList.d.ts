@@ -1,4 +1,4 @@
-import {TodoStateCallback} from './useTodoListState';
-import {TodoServiceCallback} from './useTodoListService';
+import {TodoListStateCallback} from './useTodoListState';
+import {TodoListServiceCallback} from './useTodoListService';
 
-export type TodoListCallback = TodoStateCallback & TodoServiceCallback;
+export type TodoListCallback = TodoListStateCallback & TodoListServiceCallback;

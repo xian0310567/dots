@@ -6,7 +6,7 @@ import SaveFloating from '@/components/feature/AddEventModal/SaveFloating';
 import useTodo from '@/hooks/feature/todo/useTodoList';
 
 const AddEvent = () => {
-  const {addTodo, setColor, setName} = useTodo();
+  const {addTodo, setColor, setName, color, name} = useTodo();
 
   return (
     <>

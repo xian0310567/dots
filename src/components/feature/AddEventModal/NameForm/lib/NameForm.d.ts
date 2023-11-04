@@ -1,4 +1,4 @@
 export type NameFormProps = {
-  setColor: React.Dispatch<React.SetStateAction<string>>;
-  setName: React.Dispatch<React.SetStateAction<string>>;
+  setColor: (color: string) => void;
+  setName: (name: string) => void;
 };

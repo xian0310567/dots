@@ -11,7 +11,7 @@ const ColorPicker = (props: ColorPickerProps) => {
   return (
     <FlatList
       horizontal
-      style={styled.colorPicker}
+      style={{...props.style, ...styled.colorPicker}}
       data={props.colors}
       renderItem={color => (
         <ColorChip
