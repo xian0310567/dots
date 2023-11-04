@@ -26,9 +26,9 @@ const SetTodo = (props: Props) => {
       <Container padding={30}>
         <NameForm
           color={todo.getProperty('color')}
-          setColor={() => {}}
+          setColor={color => todo.setProperty('color', color)}
           name={todo.getProperty('name')}
-          setName={() => {}}
+          setName={name => todo.setProperty('name', name)}
         />
       </Container>
       <SaveFloating />
