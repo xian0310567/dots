@@ -1,11 +1,13 @@
 import {useState} from 'react';
 
+import useColors from '@/hooks/feature/todo/useColors';
+
 import {TodoListStateCallback} from './lib/useTodoListState';
 
 const useTodoState = (): TodoListStateCallback => {
-  // todo 생성용
+  const {colorList} = useColors();
   const [name, setName] = useState('');
-  const [color, setColor] = useState('#F4BFBF');
+  const [color, setColor] = useState(colorList[0].color);
 
   return {
     name,

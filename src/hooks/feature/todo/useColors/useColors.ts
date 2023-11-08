@@ -2,25 +2,58 @@ import {useState} from 'react';
 import {ColorsCallback} from './lib/useColors';
 
 const useColors = (): ColorsCallback => {
-  const [selectedColor, setSelectedColor] = useState('#F4BFBF');
   const colorList = [
     {
-      name: 'peach',
-      color: '#F4BFBF',
+      name: 'lightRed',
+      color: '#FF7F7F',
     },
     {
-      name: 'beige',
-      color: '#FFD9C0',
+      name: 'lightOrange',
+      color: '#FFD8A0',
     },
     {
-      name: 'cream',
-      color: '#FAF0D7',
+      name: 'lightYellow',
+      color: '#FFFFB3',
     },
     {
-      name: 'sea',
-      color: '#8CC0DE',
+      name: 'lightGreen',
+      color: '#90EE90',
+    },
+    {
+      name: 'lightBlue',
+      color: '#ADD8E6',
+    },
+    {
+      name: 'lightPurple',
+      color: '#D8BFD8',
+    },
+    {
+      name: 'lightPink',
+      color: '#FFB6C1',
+    },
+    {
+      name: 'lightLimeGreen',
+      color: '#BFFF80',
+    },
+    {
+      name: 'lightSkyBlue',
+      color: '#B0E0E6',
+    },
+    {
+      name: 'navyBlue',
+      color: '#000080',
+    },
+    {
+      name: 'darkBrown',
+      color: '#8B4513',
+    },
+    {
+      name: 'darkGray',
+      color: '#A9A9A9',
     },
   ];
+
+  const [selectedColor, setSelectedColor] = useState(colorList[0].color);
 
   return {colorList, selectedColor, setSelectedColor};
 };
