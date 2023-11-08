@@ -1,11 +1,12 @@
-import {StyleSheet} from 'react-native';
+import styled from 'styled-components/native';
 
-const styled = StyleSheet.create({
-  container: {
-    paddingTop: 15,
-    paddingHorizontal: 10,
-    flex: 1,
-  },
-});
+export const Container = styled.View`
+  display: flex;
+  padding: 15px 10px;
+`;
+
+export const Loader = styled.ActivityIndicator`
+  margin-top: 50px;
+`;
 
 export default styled;

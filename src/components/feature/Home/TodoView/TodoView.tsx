@@ -1,12 +1,11 @@
-import {View, FlatList} from 'react-native';
+import {FlatList} from 'react-native';
+import {Container, Loader} from './lib/styled';
 import Todo from '@/components/feature/Home/Todo';
 
 import useClearTodo from '@/hooks/feature/todo/useClearTodo';
 
 import {TodoViewProps} from './lib/TodoView';
 import {TodoResponse} from '@/hooks/feature/todo/useTodoList';
-
-import styled from './lib/styled';
 
 const TodoView = (props: TodoViewProps) => {
   const {toDayClearTodo} = useClearTodo();
@@ -17,16 +16,16 @@ const TodoView = (props: TodoViewProps) => {
     return !!clear.find(clear => clear.todo == todo.id);
   };
 
-  if (!props.todoList) return <></>;
+  if (!props.todoList) return <Loader />;
 
   return (
-    <View style={styled.container}>
+    <Container>
       <FlatList
         data={props.todoList}
         keyExtractor={todo => todo.id}
         renderItem={todo => <Todo todo={todo} clear={clearTodo(todo.item)} />}
       />
-    </View>
+    </Container>
   );
 };
 
