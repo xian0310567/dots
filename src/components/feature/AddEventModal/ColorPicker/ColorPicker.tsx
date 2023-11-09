@@ -11,6 +11,7 @@ const ColorPicker = (props: ColorPickerProps) => {
   return (
     <FlatList
       horizontal
+      showsHorizontalScrollIndicator={false}
       style={{...props.style, ...styled.colorPicker}}
       data={props.colors}
       renderItem={color => (

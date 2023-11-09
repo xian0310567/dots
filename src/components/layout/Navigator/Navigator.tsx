@@ -8,9 +8,11 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {NavigatorCallback, TabsCallback} from './lib/Navigator';
 
 import Home from '@/page/Home';
+import My from '@/page/My';
+
 import AddEvent from '@/modal/AddEvent';
 import SetTodo from '@/modal/SetTodo';
-import My from '@/page/My';
+import Nofitication from '@/page/Nofitication';
 
 import useDarkMode from '@/hooks/util/useDarkMode';
 
@@ -76,6 +78,13 @@ const Navigator = () => {
           component={SetTodo}
           options={{
             presentation: 'modal',
+            headerShown: false,
+          }}
+        />
+        <Stack.Screen
+          name="Nofitication"
+          component={Nofitication}
+          options={{
             headerShown: false,
           }}
         />

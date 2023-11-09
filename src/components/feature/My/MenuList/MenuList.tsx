@@ -11,7 +11,9 @@ const MenuList = (props: MenuListProps) => {
     <Container>
       <Space>
         {props.systemMenus.map(menu => (
-          <Menu key={menu.key}>{menu.title}</Menu>
+          <Menu key={menu.key} onPress={menu.onPress}>
+            {menu.title}
+          </Menu>
         ))}
       </Space>
     </Container>
