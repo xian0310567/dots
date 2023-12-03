@@ -6,7 +6,7 @@ import WebView from 'react-native-webview';
 const Nofitication = () => {
   return (
     <Container>
-      <WebView source={{uri: 'http://localhost:3000/'}} />
+      <WebView source={{uri: 'http://localhost:80/notification'}} />
     </Container>
   );
 };
