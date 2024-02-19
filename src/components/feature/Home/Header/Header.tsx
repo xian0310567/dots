@@ -2,7 +2,7 @@ import React from 'react';
 
 import {View} from 'react-native';
 import Profile from '@/components/layout/Profile';
-import SelectedDate from '@/components/feature/Home/SelectedDate';
+// import SelectedDate from '@/components/feature/Home/SelectedDate';
 import AddTodoButton from '@/components/feature/Home/AddTodoButton';
 
 import style from './lib/styled';
@@ -14,7 +14,7 @@ const Header = () => {
     <View style={styled.space}>
       <View style={styled.alignSpace}>
         <Profile />
-        <SelectedDate />
+        {/* <SelectedDate /> */}
       </View>
       <AddTodoButton />
     </View>
