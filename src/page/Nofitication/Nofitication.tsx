@@ -1,12 +1,12 @@
 import React from 'react';
 
 import Container from '@/components/atom/Container';
-import WebView from 'react-native-webview';
+import NotiBoard from '@/components/feature/notification/NotiBoard';
 
 const Nofitication = () => {
   return (
     <Container>
-      <WebView source={{uri: 'http://localhost:80/notification'}} />
+      <NotiBoard></NotiBoard>
     </Container>
   );
 };
