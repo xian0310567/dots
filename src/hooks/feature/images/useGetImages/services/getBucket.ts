@@ -6,7 +6,7 @@ const service = (): GetBucketCallback => {
   const getBucket = async () => {
     const {data} = await supabase.storage.getBucket('dots');
 
-    console.log(data);
+    console.log('ㅁ', data);
   };
 
   return {getBucket};
