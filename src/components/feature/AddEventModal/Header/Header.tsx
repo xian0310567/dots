@@ -22,7 +22,6 @@ const Header = (props: HeaderProps) => {
       <HeaderSaveButton
         onPress={() => {
           router.navigate('main');
-          props.addTodo();
         }}
       />
     </View>

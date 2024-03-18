@@ -3,14 +3,14 @@ import Container from '@/components/atom/Container';
 import NameForm from '@/components/feature/AddEventModal/NameForm';
 import SaveFloating from '@/components/feature/AddEventModal/SaveFloating';
 
-import useTodo from '@/hooks/feature/todo/useTodoList';
+// import useTodo from '@/hooks/feature/todo/useTodoList';
 
 const AddEvent = () => {
-  const {addTodo, setColor, setName, color, name} = useTodo();
+  // const {addTodo, setColor, setName, color, name} = useTodo();
 
   return (
     <>
-      <Header addTodo={() => addTodo()} />
+      {/* <Header addTodo={() => addTodo()} />
       <Container padding={30}>
         <NameForm
           color={color}
@@ -18,7 +18,7 @@ const AddEvent = () => {
           name={name}
           setName={setName}
         />
-      </Container>
+      </Container> */}
       <SaveFloating />
     </>
   );

@@ -1,3 +1,1 @@
-export type HeaderProps = {
-  addTodo: () => void;
-};
+export type HeaderProps = {};
