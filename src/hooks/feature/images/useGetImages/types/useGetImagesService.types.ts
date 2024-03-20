@@ -1,3 +1,3 @@
-import {GetBucketCallback} from './services/getImages.types';
+import {GetImagesCallback} from './services/getImages.types';
 
-export type GetImagesServiceCallback = GetBucketCallback;
+export type GetImagesServiceCallback = GetImagesCallback;

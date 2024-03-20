@@ -7,10 +7,10 @@ import ImageGrid from '@/components/feature/Home/ImageGrid';
 import useGetImages from '@/hooks/feature/images/useGetImages';
 
 const Home = () => {
-  const {getBucket} = useGetImages();
+  const {getImages} = useGetImages();
 
   React.useEffect(() => {
-    getBucket();
+    getImages();
   });
 
   return (

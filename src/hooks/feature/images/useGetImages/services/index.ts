@@ -1,11 +1,11 @@
-import getBucketService from './getBucket';
+import getBucketService from './getImages';
 
 import {GetImagesServiceCallback} from '../types/useGetImagesService.types';
 
 const index = (): GetImagesServiceCallback => {
-  const {getBucket} = getBucketService();
+  const {getImages} = getBucketService();
 
-  return {getBucket};
+  return {getImages};
 };
 
 export default index;

@@ -1,3 +1,3 @@
-export type GetBucketCallback = {
-  getBucket: () => void;
+export type GetImagesCallback = {
+  getImages: () => void;
 };
