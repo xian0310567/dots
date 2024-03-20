@@ -4,10 +4,10 @@ import Header from '@/components/feature/Home/Header';
 import Container from '@/components/atom/Container';
 import ImageGrid from '@/components/feature/Home/ImageGrid';
 
-import useGetImages from '@/hooks/feature/images/useGetImages';
+import useGetGalleryContent from '@/hooks/feature/images/useGetGalleryContent';
 
 const Home = () => {
-  const {getImages} = useGetImages();
+  const {getImages} = useGetGalleryContent();
 
   React.useEffect(() => {
     getImages();
