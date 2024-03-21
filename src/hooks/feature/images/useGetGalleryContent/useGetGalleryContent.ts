@@ -1,11 +1,13 @@
+import useGetGalleryContentState from './useGetGalleryContentState';
 import useGetGalleryContentService from './services';
 
 import {GetGalleryContentCallback} from './types/useGetGalleryContent.types';
 
 const useGetImages = (): GetGalleryContentCallback => {
-  const service = useGetGalleryContentService();
+  const state = useGetGalleryContentState();
+  const service = useGetGalleryContentService(state);
 
-  return {...service};
+  return {...state, ...service};
 };
 
 export default useGetImages;

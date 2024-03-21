@@ -1,12 +1,10 @@
 import {useState} from 'react';
 
-import {
-  Gallery,
-  GetGalleryContentTypeCallback,
-} from './types/useGetGalleryContentState.types';
+import {FileObject} from '@supabase/storage-js';
+import {GetGalleryContentStateCallback} from './types/useGetGalleryContentState.types';
 
-const useGetGalleryContentState = (): GetGalleryContentTypeCallback => {
-  const [gallery, setGallery] = useState<Gallery[]>();
+const useGetGalleryContentState = (): GetGalleryContentStateCallback => {
+  const [gallery, setGallery] = useState<FileObject[]>();
 
   return {gallery, setGallery};
 };

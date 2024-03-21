@@ -1,3 +1,5 @@
-import {GetImagesServiceCallback} from './useGetGalleryContentService.types';
+import {GetGalleryContentStateCallback} from './useGetGalleryContentState.types';
+import {GetGalleryContentServiceCallback} from './useGetGalleryContentService.types';
 
-export type GetGalleryContentCallback = GetImagesServiceCallback;
+export type GetGalleryContentCallback = GetGalleryContentStateCallback &
+  GetGalleryContentServiceCallback;
