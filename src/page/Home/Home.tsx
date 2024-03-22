@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <Container>
       <Header />
-      <GalleryView />
+      <GalleryView gallery={gallery.gallery} />
     </Container>
   );
 };
